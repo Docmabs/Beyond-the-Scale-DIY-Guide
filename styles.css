@@ -297,6 +297,21 @@ body {
   margin-bottom: 0.4rem;
 }
 
+/* Booking CTA link in welcome message */
+.welcome-booking-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.welcome-booking-link:hover {
+  color: var(--navy);
+}
+
 /* Referral nudge inside guide bubble */
 .referral-nudge {
   margin-top: 0.75rem;

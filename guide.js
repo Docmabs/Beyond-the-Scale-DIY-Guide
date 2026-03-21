@@ -8,6 +8,9 @@ const inputEl     = document.getElementById('user-input');
 const sendBtn     = document.getElementById('send-btn');
 const startersEl  = document.getElementById('starters');
 
+// TODO: Replace with Dr Mothapo's live booking diary URL (e.g. Calendly)
+const DIARY_URL = 'https://www.beyondthescaleclinic.co.za/#contact';
+
 // Conversation history sent to the API (excludes system prompt — handled server-side)
 let history = [];
 let isLoading = false;
@@ -146,6 +149,32 @@ function appendTyping() {
   return wrap;
 }
 
+// ── INITIAL WELCOME MESSAGE ───────────────
+function initWelcome() {
+  const wrap = document.createElement('div');
+  wrap.className = 'message message--guide';
+
+  const avatar = document.createElement('div');
+  avatar.className = 'message__avatar';
+  avatar.textContent = 'G';
+
+  const bubble = document.createElement('div');
+  bubble.className = 'message__bubble';
+  bubble.innerHTML =
+    '<p>Hello, and welcome to the Beyond the Scale Guide.</p>' +
+    '<p>I\'m here to help you understand your weight journey — the biology of obesity, how GLP-1 therapy works, ' +
+    'what a multidisciplinary programme involves, and much more. Ask me anything and I\'ll give you clear, ' +
+    'evidence-based answers in plain language.</p>' +
+    '<p>This is an educational resource and does not replace personalised clinical care. ' +
+    'Whenever you\'re ready, the clinic team is here for you.</p>' +
+    '<p><a href="' + DIARY_URL + '" class="welcome-booking-link" target="_blank" rel="noopener">' +
+    'Book your initial consultation with Dr Mothapo &rarr;</a></p>';
+
+  wrap.appendChild(avatar);
+  wrap.appendChild(bubble);
+  messagesEl.appendChild(wrap);
+}
+
 // ── SIMPLE MARKDOWN FORMATTER ─────────────
 function formatMarkdown(text) {
   return text
@@ -165,3 +194,6 @@ function formatMarkdown(text) {
     // Single newlines within a paragraph
     .replace(/\n/g, '<br>');
 }
+
+// ── INIT ──────────────────────────────────
+initWelcome();
