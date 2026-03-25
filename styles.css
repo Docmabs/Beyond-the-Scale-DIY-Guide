@@ -149,27 +149,27 @@ body {
   margin-bottom: 1.75rem;
 }
 
-.disclaimer {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  background: rgba(201,168,76,.1);
-  border: 1px solid rgba(201,168,76,.3);
-  border-radius: var(--r-sm);
-  padding: 0.75rem 1rem;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,.7);
+/* ── DISCLAIMER BAR ── */
+.disclaimer-bar {
+  background: var(--navy-mid);
+  border-bottom: 1px solid rgba(201,168,76,.2);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.74rem;
+  color: rgba(255,255,255,.55);
   line-height: 1.5;
-  text-align: left;
-  max-width: 560px;
-  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
 }
 
-.disclaimer__icon {
+.disclaimer-bar strong { color: rgba(255,255,255,.75); font-weight: 600; }
+
+.disclaimer-bar__icon {
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   flex-shrink: 0;
-  margin-top: 0.05rem;
 }
 
 /* ── CHAT WRAP ── */
