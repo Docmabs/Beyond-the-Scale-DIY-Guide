@@ -419,9 +419,41 @@ body {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
-  .hero { padding: 2.5rem 1.25rem 2rem; }
-  .hero__title { font-size: 2rem; }
-  .message__bubble { max-width: 88%; }
+  /* Header */
+  .logo__text { font-size: 1rem; }
+  .btn--outline { padding: 0.4rem 0.75rem; font-size: 0.75rem; }
+
+  /* Hero */
+  .hero { padding: 2rem 1rem 1.75rem; }
+  .hero__title { font-size: 1.9rem; }
+  .hero__sub { font-size: 0.92rem; }
+  .disclaimer { font-size: 0.74rem; padding: 0.6rem 0.75rem; }
+
+  /* Chat */
+  .chat-wrap { padding: 1.25rem 1rem; }
+  .chat-container { gap: 1.25rem; }
+
+  /* Starters — allow text to wrap inside pills for longer prompts */
   .starters__grid { gap: 0.4rem; }
-  .starter-btn { font-size: 0.78rem; padding: 0.4rem 0.85rem; }
+  .starter-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+    white-space: normal;
+    text-align: left;
+    border-radius: var(--r-sm);
+  }
+
+  /* Messages */
+  .message { gap: 0.5rem; }
+  .message__bubble {
+    max-width: 88%;
+    font-size: 0.88rem;
+    padding: 0.75rem 0.9rem;
+  }
+  .message__avatar { width: 28px; height: 28px; font-size: 0.55rem; }
+
+  /* Input */
+  .input-bar { padding: 0.5rem 0.5rem 0.5rem 0.85rem; }
+  .input-bar__send { width: 40px; height: 40px; }
+  .input-bar__textarea { font-size: 0.88rem; }
 }
