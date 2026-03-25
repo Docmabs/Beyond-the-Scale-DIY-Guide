@@ -251,8 +251,10 @@ body {
 .message--guide .message__avatar {
   background: var(--navy);
   color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: .04em;
 }
 
 .message--user .message__avatar {

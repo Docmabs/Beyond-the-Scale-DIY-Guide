@@ -98,7 +98,7 @@ function appendMessage(role, text, showReferral = false) {
 
   const avatar = document.createElement('div');
   avatar.className = 'message__avatar';
-  avatar.textContent = role === 'guide' ? 'G' : 'You';
+  avatar.textContent = role === 'guide' ? 'BTS' : 'You';
 
   const bubble = document.createElement('div');
   bubble.className = 'message__bubble';
@@ -131,7 +131,7 @@ function appendTyping() {
 
   const avatar = document.createElement('div');
   avatar.className = 'message__avatar';
-  avatar.textContent = 'G';
+  avatar.textContent = 'BTS';
 
   const bubble = document.createElement('div');
   bubble.className = 'message__bubble';
