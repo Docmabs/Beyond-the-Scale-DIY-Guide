@@ -9,7 +9,7 @@ const sendBtn     = document.getElementById('send-btn');
 const startersEl  = document.getElementById('starters');
 
 // TODO: Replace with Dr Mothapo's live booking diary URL (e.g. Calendly)
-const DIARY_URL = 'https://www.beyondthescaleclinic.co.za/#contact';
+const DIARY_URL = 'https://www.beyondthescaleclinic.co.za/booking';
 
 // Conversation history sent to the API (excludes system prompt — handled server-side)
 let history = [];
@@ -109,7 +109,7 @@ function appendMessage(role, text, showReferral = false) {
     if (showReferral) {
       const nudge = document.createElement('div');
       nudge.className = 'referral-nudge';
-      nudge.innerHTML = 'Ready to take the next step? <a href="https://www.beyondthescaleclinic.co.za" target="_blank" rel="noopener">Book a consultation</a> with the Beyond the Scale clinical team.';
+      nudge.innerHTML = 'Ready to take the next step? <a href="https://www.beyondthescaleclinic.co.za/booking" target="_blank" rel="noopener">Book a consultation</a> with the Beyond the Scale clinical team.';
       bubble.appendChild(nudge);
     }
   } else {
