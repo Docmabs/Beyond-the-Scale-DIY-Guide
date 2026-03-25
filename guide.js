@@ -34,7 +34,13 @@ sendBtn.addEventListener('click', sendMessage);
 // ── STARTER BUTTONS ───────────────────────
 document.querySelectorAll('.starter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
+    if (isLoading) return;
     const q = btn.dataset.q;
+    document.querySelectorAll('.starter-btn').forEach(b => {
+      b.disabled = true;
+      b.style.opacity = '0.45';
+      b.style.cursor = 'not-allowed';
+    });
     inputEl.value = q;
     sendMessage();
   });
