@@ -174,7 +174,7 @@ function initWelcome() {
     '<p>This is an educational resource and does not replace personalised clinical care. ' +
     'Whenever you\'re ready, the clinic team is here for you.</p>' +
     '<p><a href="' + DIARY_URL + '" class="welcome-booking-link" target="_blank" rel="noopener">' +
-    'Book your initial consultation with Dr Mothapo &rarr;</a></p>';
+    'Book your initial consultation &rarr;</a></p>';
 
   wrap.appendChild(avatar);
   wrap.appendChild(bubble);
